@@ -9,7 +9,7 @@ body {
 .navbar-cust-style {
   padding-left: 5px;
   padding-right: 5px;
-  height: 150px;
+  height: 100px;
 }
 
 .title {
@@ -19,7 +19,7 @@ body {
 .logo {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 60px;
-  padding-top: 50px;
+  padding-top: 100px;
   border-bottom: #D90368 solid 10px;
   width: fit-content;
   height: fit-content;
@@ -36,5 +36,6 @@ body {
 @media only screen and (max-width: 576px) {
   .logo {
     font-size: 40px;
+    padding-top: 25px;
   }
 }
