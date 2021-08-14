@@ -54,6 +54,12 @@ body {
 }
 
 @media only screen and (max-width: 576px) {
+  .nav-coll-cust {
+    border: black solid 1px;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-top: 10px;
+    padding: 10px 0px 10px 20px;
+  }
   .logo {
     font-size: 38px;
     padding-top: 25px;
@@ -61,5 +67,11 @@ body {
   .description {
     font-size: 25px;
     padding: 20px 20px 0px 20px;
+  }
+  .first-link {
+    margin-left: 0px;
+  }
+  .other-links {
+    margin-left: 0px;
   }
 }
