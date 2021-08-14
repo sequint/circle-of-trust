@@ -1,5 +1,6 @@
 .game-nav-cust {
-  background-color: transparent;
+  background-color: #EADEDA;
+  box-shadow: 0 4px 2px -2px white;
 }
 
 .game-main-logo {
@@ -22,13 +23,13 @@
 .character-menu {
   margin-top: 65px;
   background-color: #D90368;
-  height: 700px;
+  height: 867px;
   width: 100%;
 }
 
 .game-play {
   margin-top: 65px;
-  background-color: #2E294E;
-  height: 700px;
+  background-color: #EADEDA;
+  height: 867px;
   width: 100%;
 }
