@@ -1,9 +1,15 @@
+* {
+  
+}
+
 body {
   background-color: #EADEDA;
 }
 
 .navbar-cust-style {
   background-color: transparent;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .title {
@@ -15,11 +21,18 @@ body {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 60px;
   padding-top: 50px;
+  border-bottom: #D90368 solid 10px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .middle-O {
   color: #D90368;
 }
+
+
 
 @media only screen and (max-width: 576px) {
   .logo {
