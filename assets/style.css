@@ -5,3 +5,8 @@ body {
 .navbar-cust-style {
   background-color: transparent;
 }
+
+.title {
+  background-color: #D90368;
+  height: 650px;
+}
