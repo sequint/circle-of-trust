@@ -1,0 +1,11 @@
+.game-nav-cust {
+  background-color: transparent;
+}
+
+.game-main-logo {
+  font-size: 25px;
+  padding-top: 0px;
+  margin-left: 10px;
+  margin-right: 0px;
+  border-bottom: #D90368 solid 3px;
+}
