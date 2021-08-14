@@ -20,9 +20,15 @@
 }
 
 .character-menu {
-  display: flex;
-  margin-top: 55px;
+  margin-top: 65px;
   background-color: #D90368;
   height: 700px;
-  width: 250px;
+  width: 100%;
+}
+
+.game-play {
+  margin-top: 65px;
+  background-color: #2E294E;
+  height: 700px;
+  width: 100%;
 }
