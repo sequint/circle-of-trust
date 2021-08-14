@@ -1,3 +1,7 @@
 body {
   background-color: #EADEDA;
 }
+
+.navbar-cust-style {
+  background-color: transparent;
+}
