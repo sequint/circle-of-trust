@@ -40,8 +40,9 @@ body {
   border-radius: 5px;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.6);
   background-color: #D90368;
-  height: 40px;
-  width: 90px;
+  height: 45px;
+  width: 110px;
+  margin-left: 15px;
 }
 
 .first-link {
