@@ -18,3 +18,11 @@
   background-color: rgba(255, 255, 255, 0.95);
   padding: 10px 0px 10px 20px;
 }
+
+.character-menu {
+  display: flex;
+  margin-top: 55px;
+  background-color: #D90368;
+  height: 700px;
+  width: 300px;
+}
