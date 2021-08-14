@@ -33,3 +33,19 @@
   height: 867px;
   width: 100%;
 }
+
+.character-pic {
+  height: 200px;
+  width: 200px;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 576px) {
+  .character-pic {
+    height: 50px;
+    width: 50px;
+    margin-left: 13.5px;
+    margin-top: 15px;
+  }
+}
