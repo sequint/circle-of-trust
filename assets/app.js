@@ -189,7 +189,7 @@ document.addEventListener('click', event => {
         document.getElementById('game-prompt-header').innerHTML = `
         <img src="./assets/characters/char-lena.png" alt="Queen Character" class="rounded-circle"
         width="100" height="100">
-        <h5 class="modal-title text-center pop-title" id="pop-title">A Queenly Message!</h5>
+        <h5 class="modal-title text-center pop-title" id="pop-title">Queenly Message!</h5>
         `
         document.getElementById('game-modal-content').textContent = "A Mia has appeared as Guardian of the first ring!  You must convince her that you are worthy to enter the outer ring."
         document.getElementById('close-btn').textContent = "Got It!"
