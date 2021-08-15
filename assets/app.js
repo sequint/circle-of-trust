@@ -27,7 +27,17 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 
   if (nextClick === 4) {
     document.getElementById('close-btn-cont').innerHTML = `
-    <button type="button" class="btn btn-secondary hate-steven-btn" id="hate-steven-btn" data-bs-dismiss="modal">I Hate Steven</button>
+    <button type="button" class="btn btn-primary hate-steven-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      I Hate Steven
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/96/reversed-hand-with-middle-finger-extended_1f595.png" alt="Middle finger emoji">
+        </div>
+      </div>
+    </div>
     `
     document.getElementById('decree-next-btn').textContent = "Let's Do This!"
   }
@@ -35,16 +45,4 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
     nextClick++
   }
 
-})
-
-// Event listener for hate steven button to throw up a middle finger and close on click.
-document.addEventListener('click', event => {
-  if (event.target.classList.contains('hate-steven-btn')){
-    console.log('Middle finger')
-
-    document.getElementById('middle-finger-pic').innerHTML = `
-    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/96/reversed-hand-with-middle-finger-extended_1f595.png" alt="Middle finger emoji">
-    `
-    
-  }
 })
