@@ -3,7 +3,9 @@ let charSteven = {
     { name: 'charm', moodPoints: 1 },
     { name: 'programming', moodPoints: 3 },
     { name: 'surfing', moodPoints: 4 },
-    { name: 'taking vacations', moodPoints: 6 }
+    { name: 'taking vacations', moodPoints: 6 },
+    { name: 'bad-jokes', moodPoints: 2 },
+    { name: 'drinking', moodPoints: 6 },
   ]
   stamina: 100,
   money: 50,
