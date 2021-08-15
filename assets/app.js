@@ -181,6 +181,11 @@ document.addEventListener('click', event => {
 // When Steven is clicked show first prompt.
 document.addEventListener('click', event => {
   if (event.target.classList.contains('say-something')) {
+    document.getElementById('steven-on-board').innerHTML = `
+      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle" id="steven-call-round-one">
+    `
+    document.getElementById('game-message').innerHTML = ''
+
     document.getElementById('game-prompt-header').innerHTML = `
     <img src="./assets/characters/char-steven.jpeg" alt="Queen Character" class="rounded-circle"
                 width="100" height="100">
