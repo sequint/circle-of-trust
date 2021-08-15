@@ -123,6 +123,7 @@
   height: 100px;
   width: 100px;
   margin-top: 400px;
+  border: black solid 1px;
 }
 
 .mia-position {
