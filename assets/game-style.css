@@ -43,13 +43,6 @@
   width: 100%;
 }
 
-.character-pic {
-  height: 200px;
-  width: 200px;
-  margin-left: 50px;
-  margin-top: 40px;
-}
-
 .outer-circle {
   z-index: 200;
   border: #820263 solid 40px;
