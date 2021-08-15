@@ -70,7 +70,19 @@
   margin: 163px 0px 0px 372px;
 }
 
+.inner-circle {
+  z-index: 500;
+  position: absolute;
+  background-color: #D90368;
+  height: 375px;
+  width: 375px;
+  margin: 254px 0px 0px 460px;
+}
+
 @media only screen and (max-width: 576px) {
+  .game-play {
+    height: 550px;
+  }
   .offcanvas-backdrop.show {
     opacity: 0;
   }
@@ -102,5 +114,12 @@
     width: 230px;
     margin-left: 72px;
     margin-top: 88px;
+  }
+  .inner-circle {
+    background-color: #D90368;
+    height: 150px;
+    width: 150px;
+    margin-left: 112px;
+    margin-top: 125px;
   }
 }
