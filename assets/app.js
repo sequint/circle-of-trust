@@ -102,7 +102,7 @@ let characters = [
 ]
 
 $(window).load(function () {
-  $('#instruction-start').modal('show');
+  $('#game-modal').modal('show');
 });
 
 // Create variable to count which click you are on.
@@ -123,10 +123,10 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
   event.preventDefault()
 
   if (nextClick > 4) {
-    document.getElementById('instruction-start')
+    document.getElementById('game-modal')
   }
 
-  document.getElementById('start-instructions-content').textContent = instructions[nextClick]
+  document.getElementById('game-modal-content').textContent = instructions[nextClick]
 
   if (nextClick === 4) {
     document.getElementById('hate-steven-btn-cont').innerHTML =`
@@ -152,10 +152,10 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 
 })
 
+// Place Steven character on screen afer ready is clicked.
 document.addEventListener('click', event => {
   if(event.target.classList.contains('decree-next-btn')) {
     nextClick++
-    console.log(nextClick)
     if (nextClick === 6) {
       document.getElementById('game-message').innerHTML = `
         <div class="row">
@@ -172,8 +172,21 @@ document.addEventListener('click', event => {
       `
       
       document.getElementById('steven-on-board').innerHTML = `
-      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle say-something">
+      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle say-something" id="steven-call-round-one">
       `
     }
   }
+})
+
+// When Steven is clicked show first prompt.
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('say-something')) {
+    document.getElementById('game-prompt-header').innerHTML = `
+    <img src="./assets/characters/char-steven.jpeg" alt="Queen Character" class="rounded-circle"
+                width="100" height="100">
+          <h5 class="modal-title text-center pop-title" id="pop-title">Thanks For Your Help!</h5>
+    `
+    $('#game-modal').modal('show')
+  }
+  
 })
