@@ -154,6 +154,20 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 document.addEventListener('click', event => {
   if(event.target.classList.contains('close-btn')) {
     if (nextClick === 4) {
+      document.getElementById('game-message').innerHTML = `
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body tip">
+                <h5 class="card-title">Tip!</h5>
+                <p class="card-text">When a character has a yellow border, click on them to see what they have to say.</p>
+                <a href="#" class="btn btn-primary remove-tip">Got It</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+      
       document.getElementById('steven-on-board').innerHTML = `
       <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle">
       `

@@ -97,6 +97,17 @@
   margin-top: 400px;
 }
 
+.tip {
+  z-index: 600;
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-top: 235px;
+  margin-left: 90px;
+}
+
 @media only screen and (max-width: 576px) {
   .game-play {
     height: 550px;
