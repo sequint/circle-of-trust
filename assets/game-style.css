@@ -58,7 +58,16 @@
   border: #FFD400 solid 40px;
   height: 700px;
   width: 700px;
-  margin: 150px auto 0px auto;
+  margin: 88px 0px 0px 299px;
+}
+
+.outer-inner-circle {
+  z-index: 400;
+  position: absolute;
+  border: black solid 40px;
+  height: 550px;
+  width: 550px;
+  margin: 163px 0px 0px 372px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -66,7 +75,7 @@
     opacity: 0;
   }
   .char-menu {
-    width: 700px;
+    width: 100%;
     height: 500px;
   }
   .char-list {
@@ -74,9 +83,24 @@
     margin-right: auto;
   }
   .outer-circle {
-    height: 680px;
-    width: 680px;
-    margin-left: 5px;
-    margin-top: 50px;
+    border: #820263 solid 20px;
+    height: 370px;
+    width: 370px;
+    margin-left: 3px;
+    margin-top: 20px;
+  }
+  .inner-outer-circle {
+    border: #FFD400 solid 20px;
+    height: 300px;
+    width: 300px;
+    margin-left: 38px;
+    margin-top: 53px;
+  }
+  .outer-inner-circle {
+    border: black solid 20px;
+    height: 230px;
+    width: 230px;
+    margin-left: 72px;
+    margin-top: 88px;
   }
 }
