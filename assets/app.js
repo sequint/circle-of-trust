@@ -50,7 +50,7 @@ let characters = [
     moodPoints: 21,
     money: 50,
     unlocked: false
-  }
+  },
 
   {
     charName: 'Zach',
@@ -66,7 +66,7 @@ let characters = [
     moodPoints: 21,
     money: 50,
     unlocked: false
-  }
+  },
 
   {
     charName: 'Papa Bear',
@@ -82,10 +82,10 @@ let characters = [
     moodPoints: 21,
     money: 200,
     unlocked: false
-  }
+  },
 
   {
-    charName: 'Mama Bear'
+    charName: 'Mama Bear',
     powers: [
       { name: 'finance', moodPoints: 5 },
       { name: 'herbal-knowledge', moodPoints: 6 },
@@ -148,8 +148,8 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 
 //******************************************** Unlock Characters ****************************************************//
 
-const unlockCharacterDisplay = () => {
+// const unlockCharacterDisplay = () => {
   
-  // Loop through 
+//   // Loop through 
 
-}
+// }
