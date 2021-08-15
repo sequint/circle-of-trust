@@ -83,12 +83,6 @@
   margin-right: 180px;
 }
 
-.middle-finger-pic {
-  z-index: 900;
-  position: absolute;
-  margin: auto auto auto auto;
-}
-
 @media only screen and (max-width: 576px) {
   .game-play {
     height: 550px;
