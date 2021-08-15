@@ -26,6 +26,15 @@
   height: 931px;
 }
 
+.char-list {
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.steven-pic {
+  margin-right: 5px;
+}
+
 .game-play {
   margin-top: 65px;
   background-color: #EADEDA;
