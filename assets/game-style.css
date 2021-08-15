@@ -125,6 +125,10 @@
   margin-top: 400px;
 }
 
+.say-something {
+  border: green solid 5px;
+}
+
 .tip {
   z-index: 600;
   position: absolute;
@@ -137,6 +141,14 @@
 }
 
 .remove-tip {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.6);
+  background-color: #D90368;
+}
+
+.remove-tip:hover {
   color: white;
   border: none;
   border-radius: 5px;

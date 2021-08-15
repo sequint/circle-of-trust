@@ -160,7 +160,7 @@ document.addEventListener('click', event => {
             <div class="card">
               <div class="card-body tip">
                 <h5 class="card-title">Tip!</h5>
-                <p class="card-text">When a character has a yellow border, click on them to see what they have to say.</p>
+                <p class="card-text">When a character has a green border, click on them to see what they have to say.</p>
                 <a href="#" class="btn btn-primary remove-tip">Got It</a>
               </div>
             </div>
@@ -169,7 +169,7 @@ document.addEventListener('click', event => {
       `
       
       document.getElementById('steven-on-board').innerHTML = `
-      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle">
+      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle say-something">
       `
     }
   }
