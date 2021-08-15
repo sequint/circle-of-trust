@@ -127,6 +127,7 @@
 
 .say-something {
   border: green solid 5px;
+  cursor: pointer;
 }
 
 .tip {
