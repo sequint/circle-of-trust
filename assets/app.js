@@ -122,13 +122,19 @@ const instructions = [
 document.getElementById('decree-next-btn').addEventListener('click', event => {
   event.preventDefault()
 
+  if (nextClick > 4) {
+    document.getElementById('instruction-start')
+  }
+
   document.getElementById('start-instructions-content').textContent = instructions[nextClick]
 
   if (nextClick === 4) {
-    document.getElementById('close-btn-cont').innerHTML = `
-    <button type="button" class="btn btn-primary hate-steven-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    document.getElementById('close-btn').textContent = "Let's Do This!"
+
+    document.getElementById('decree-next-btn').innerHTML = `
+    <div class="hate-steven-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
       I Hate Steven
-    </button>
+    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -138,10 +144,11 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
       </div>
     </div>
     `
-    document.getElementById('decree-next-btn').textContent = "Let's Do This!"
   }
   else {
     nextClick++
   }
 
 })
+
+// document.addEventListener('click')
