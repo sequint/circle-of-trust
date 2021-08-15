@@ -145,11 +145,3 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
   }
 
 })
-
-//******************************************** Unlock Characters ****************************************************//
-
-// const unlockCharacterDisplay = () => {
-  
-//   // Loop through 
-
-// }
