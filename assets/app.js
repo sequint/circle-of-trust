@@ -198,7 +198,11 @@ document.addEventListener('click', event => {
 
     document.getElementById('game-modal-content').textContent = "Glad you are onboard.  It will take a team to get into the inner circle! Let's see who the first Guardian is."
 
+    let hateBtn = document.getElementById('hate-steven-btn-cont')
+    hateBtn.remove()
+
     document.getElementById('close-btn').textContent = "Let's See"
+
 
     $('#game-modal').modal('show')
   }
