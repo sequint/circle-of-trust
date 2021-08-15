@@ -185,7 +185,6 @@ document.addEventListener('click', event => {
           <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle" id="mia-appear">
       `
       setTimeout(() => {
-        console.log('Worked')
         document.getElementById('game-prompt-header').innerHTML = `
         <img src="./assets/characters/char-lena.png" alt="Queen Character" class="rounded-circle"
         width="100" height="100">
@@ -197,6 +196,12 @@ document.addEventListener('click', event => {
       }, 1000)
     }
     
+    if (nextClick === 8) {
+      document.getElementById('char-on-board').innerHTML = `
+          <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle say-something mia-start" id="mia-start">
+      `
+    }
+
   }
 
 
@@ -227,4 +232,10 @@ document.addEventListener('click', event => {
     $('#game-modal').modal('show')
   }
   
+})
+
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('mia-start')) {
+
+  }
 })
