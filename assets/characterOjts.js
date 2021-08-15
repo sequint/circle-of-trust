@@ -6,7 +6,7 @@ let charSteven = {
     { name: 'taking vacations', moodPoints: 6 },
     { name: 'bad-jokes', moodPoints: 2 },
     { name: 'drinking', moodPoints: 6 },
-  ]
+  ],
   stamina: 100,
   money: 50,
   level: 1,
@@ -22,9 +22,9 @@ let charMia = {
     { name: 'good-jokes', moodPoints: 7 }
   ],
   weaknesses: ['vacations', 'baked goods', 'hanging out with friends', 'charm', 'money'],
-  dislikes: ['bad-jokes', 'misogynists', 'viking-fans']
+  dislikes: ['bad-jokes', 'misogynists', 'viking-fans'],
   mood: ['happy', 'neutral', 'angry'],
-  moodPoints,
+  moodPoints: 21,
   money: 0
 }
 
@@ -36,9 +36,9 @@ let charHannah = {
     { name: 'nursing', moodPoints: 8 }
   ],
   weaknesses: ['zach', 'house-gifts', 'greys-anatomy', 'good-jokes'],
-  dislikes: ['bad-jokes', 'misogynists', 'drunkeness']
+  dislikes: ['bad-jokes', 'misogynists', 'drunkeness'],
   mood: ['happy', 'neutral', 'angry'],
-  moodPoints,
+  moodPoints: 21,
   money: 50
 }
 
@@ -50,9 +50,9 @@ let charZach = {
     { name: 'viking-knowledge', moodPoints: 10 }
   ],
   weaknesses: ['vikings', 'hannah', 'ipa', 'greys-anatomy'],
-  dislikes: ['chaos', 'packer-fans']
+  dislikes: ['chaos', 'packer-fans'],
   mood: ['happy', 'neutral', 'angry'],
-  moodPoints,
+  moodPoints: 21,
   money: 50
 }
 
@@ -64,9 +64,9 @@ let charPapaBear = {
     { name: 'cooking', moodPoints: 10 }
   ],
   weaknesses: ['sleep', 'whiskey', 'the-girls'],
-  dislikes: ['american-sports', 'messy-house', 'ipas', 'steven', 'money', 'good-jokes', 'bad-service']
+  dislikes: ['american-sports', 'messy-house', 'ipas', 'steven', 'money', 'good-jokes', 'bad-service'],
   mood: ['happy', 'neutral', 'angry'],
-  moodPoints,
+  moodPoints: 21,
   money: 200
 }
 
@@ -78,8 +78,8 @@ let charMamaBear = {
     { name: 'mama-bear-ferocity', moodPoints: 10 }
   ],
   weaknesses: ['left-alone'],
-  dislikes: ['american-sports', 'messy-house', 'bad-jokes', 'steven', 'money', 'bad-service', 'loud-music', 'long-hair']
+  dislikes: ['american-sports', 'messy-house', 'bad-jokes', 'steven', 'money', 'bad-service', 'loud-music', 'long-hair'],
   mood: ['happy', 'neutral', 'angry'],
-  moodPoints,
+  moodPoints: 21,
   money: 300
 }
