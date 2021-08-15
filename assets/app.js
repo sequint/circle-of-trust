@@ -151,4 +151,12 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 
 })
 
-// document.addEventListener('click')
+document.addEventListener('click', event => {
+  if(event.target.classList.contains('close-btn')) {
+    if (nextClick === 4) {
+      document.getElementById('steven-on-board').innerHTML = `
+      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle">
+      `
+    }
+  }
+})
