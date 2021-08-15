@@ -152,10 +152,11 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 
 })
 
-// Place Steven character on screen afer ready is clicked.
 document.addEventListener('click', event => {
+  // Place Steven character on screen afer ready is clicked for 6th time.
   if(event.target.classList.contains('decree-next-btn')) {
     nextClick++
+    console.log(nextClick)
     if (nextClick === 6) {
       document.getElementById('game-message').innerHTML = `
         <div class="row">
@@ -170,12 +171,15 @@ document.addEventListener('click', event => {
           </div>
         </div>
       `
-      
+
       document.getElementById('steven-on-board').innerHTML = `
       <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle say-something" id="steven-call-round-one">
       `
     }
   }
+
+  // Place Mia on screen on 7th click.
+  
 })
 
 // When Steven is clicked show first prompt.
@@ -188,9 +192,14 @@ document.addEventListener('click', event => {
 
     document.getElementById('game-prompt-header').innerHTML = `
     <img src="./assets/characters/char-steven.jpeg" alt="Queen Character" class="rounded-circle"
-                width="100" height="100">
-          <h5 class="modal-title text-center pop-title" id="pop-title">Thanks For Your Help!</h5>
+    width="100" height="100">
+    <h5 class="modal-title text-center pop-title" id="pop-title">Thanks For Your Help!</h5>
     `
+
+    document.getElementById('game-modal-content').textContent = "Glad you are onboard.  It will take a team to get into the inner circle! Let's see who the first Guardian is."
+
+    document.getElementById('close-btn').textContent = "Let's See"
+
     $('#game-modal').modal('show')
   }
   
