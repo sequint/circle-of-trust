@@ -171,15 +171,35 @@ document.addEventListener('click', event => {
           </div>
         </div>
       `
-
       document.getElementById('steven-on-board').innerHTML = `
-      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play rounded-circle say-something" id="steven-call-round-one">
+      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play steven-position-round-1 rounded-circle say-something" id="steven-call-round-one">
       `
     }
+
+    // Place Mia on screen on 7th click.
+    if (nextClick === 7) {
+      document.getElementById('steven-on-board').innerHTML = `
+      <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play steven-position-round-1 rounded-circle" id="steven-call-round-one">
+      `
+      document.getElementById('char-on-board').innerHTML = `
+          <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle" id="mia-appear">
+      `
+      setTimeout(() => {
+        console.log('Worked')
+        document.getElementById('game-prompt-header').innerHTML = `
+        <img src="./assets/characters/char-lena.png" alt="Queen Character" class="rounded-circle"
+        width="100" height="100">
+        <h5 class="modal-title text-center pop-title" id="pop-title">A Queenly Message!</h5>
+        `
+        document.getElementById('game-modal-content').textContent = "A Mia has appeared as Guardian of the first ring!  You must convince her that you are worthy to enter the outer ring."
+        document.getElementById('close-btn').textContent = "Got It!"
+        $('#game-modal').modal('show')
+      }, 1000)
+    }
+    
   }
 
-  // Place Mia on screen on 7th click.
-  
+
 })
 
 // When Steven is clicked show first prompt.
@@ -191,7 +211,7 @@ document.addEventListener('click', event => {
     document.getElementById('game-message').innerHTML = ''
 
     document.getElementById('game-prompt-header').innerHTML = `
-    <img src="./assets/characters/char-steven.jpeg" alt="Queen Character" class="rounded-circle"
+    <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="rounded-circle"
     width="100" height="100">
     <h5 class="modal-title text-center pop-title" id="pop-title">Thanks For Your Help!</h5>
     `
