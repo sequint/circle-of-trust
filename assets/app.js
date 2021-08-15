@@ -15,7 +15,6 @@ let charSteven = {
   stamina: 100,
   money: 50,
   level: 1,
-  unlockedChars: [],
   inCircle: false
 }
 
@@ -30,7 +29,8 @@ let charMia = {
   dislikes: ['bad-jokes', 'misogynists', 'viking-fans'],
   mood: ['happy', 'neutral', 'angry'],
   moodPoints: 21,
-  money: 0
+  money: 0,
+  unlocked: false
 }
 
 let charHannah = {
@@ -44,7 +44,8 @@ let charHannah = {
   dislikes: ['bad-jokes', 'misogynists', 'drunkeness'],
   mood: ['happy', 'neutral', 'angry'],
   moodPoints: 21,
-  money: 50
+  money: 50,
+  unlocked: false
 }
 
 let charZach = {
@@ -58,7 +59,8 @@ let charZach = {
   dislikes: ['chaos', 'packer-fans'],
   mood: ['happy', 'neutral', 'angry'],
   moodPoints: 21,
-  money: 50
+  money: 50,
+  unlocked: false
 }
 
 let charPapaBear = {
@@ -72,7 +74,8 @@ let charPapaBear = {
   dislikes: ['american-sports', 'messy-house', 'ipas', 'steven', 'money', 'good-jokes', 'bad-service'],
   mood: ['happy', 'neutral', 'angry'],
   moodPoints: 21,
-  money: 200
+  money: 200,
+  unlocked: false
 }
 
 let charMamaBear = {
@@ -86,7 +89,8 @@ let charMamaBear = {
   dislikes: ['american-sports', 'messy-house', 'bad-jokes', 'steven', 'money', 'bad-service', 'loud-music', 'long-hair'],
   mood: ['happy', 'neutral', 'angry'],
   moodPoints: 21,
-  money: 300
+  money: 300,
+  unlocked: false
 } 
 
 $(window).load(function () {
