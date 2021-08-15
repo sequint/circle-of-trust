@@ -89,6 +89,13 @@
   border: none;
 }
 
+.char-in-play {
+  z-index: 600;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+
 @media only screen and (max-width: 576px) {
   .game-play {
     height: 550px;
