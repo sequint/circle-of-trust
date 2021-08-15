@@ -83,6 +83,12 @@
   margin-right: 180px;
 }
 
+.middle-finger {
+  margin-top: 200px;
+  background-color: transparent;
+  border: none;
+}
+
 @media only screen and (max-width: 576px) {
   .game-play {
     height: 550px;
