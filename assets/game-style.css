@@ -79,6 +79,10 @@
   margin: 254px 0px 0px 460px;
 }
 
+.pop-title {
+  margin-left: 20px;
+}
+
 @media only screen and (max-width: 576px) {
   .game-play {
     height: 550px;
