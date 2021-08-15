@@ -125,6 +125,10 @@
   margin-top: 400px;
 }
 
+.mia-position {
+  margin-left: 190px;
+}
+
 .say-something {
   border: green solid 5px;
   cursor: pointer;
