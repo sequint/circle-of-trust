@@ -130,7 +130,7 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
 
   if (nextClick === 4) {
     document.getElementById('hate-steven-btn-cont').innerHTML =`
-    <button class="hate-steven-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-secondary hate-steven-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
       I Hate Steven
     </button>
 
@@ -142,22 +142,21 @@ document.getElementById('decree-next-btn').addEventListener('click', event => {
       </div>
     </div>
     `
-
+    
     document.getElementById('close-btn-cont').innerHTML = `
     <button type="button" class="btn btn-secondary decree-next-btn" id="close-btn" data-bs-dismiss="modal">Ready!</button>
     `
     let nextRemoved = document.getElementById('next-btn-cont')
     nextRemoved.remove()
   }
-  else {
-    nextClick++
-  }
 
 })
 
 document.addEventListener('click', event => {
-  if(event.target.classList.contains('close-btn')) {
-    if (nextClick === 4) {
+  if(event.target.classList.contains('decree-next-btn')) {
+    nextClick++
+    console.log(nextClick)
+    if (nextClick === 6) {
       document.getElementById('game-message').innerHTML = `
         <div class="row">
           <div class="col-sm-6">
