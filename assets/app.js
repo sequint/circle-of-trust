@@ -30,10 +30,22 @@ let characters = [
     ],
     weaknesses: ['vacations', 'baked goods', 'hanging out with friends', 'charm', 'money'],
     dislikes: ['bad-jokes', 'misogynists', 'viking-fans'],
-    mood: ['happy', 'neutral', 'angry'],
+    mood: ['happy', 'neutral', 'bad'],
     moodPoints: 21,
     money: 0,
-    unlocked: false
+    unlocked: false,
+    getMood() {
+      let ranNumb = Math.floor(Math.random() * 3)
+      if(ranNumb === 1) {
+        return this.mood[0]
+      }
+      else if (ranNumb === 2) {
+        return this.mood[1]
+      }
+      if (ranNumb === 3) {
+        return this.mood[2]
+      }
+    }
   },
 
   {
@@ -46,10 +58,22 @@ let characters = [
     ],
     weaknesses: ['zach', 'house-gifts', 'greys-anatomy', 'good-jokes'],
     dislikes: ['bad-jokes', 'misogynists', 'drunkeness'],
-    mood: ['happy', 'neutral', 'angry'],
+    mood: ['happy', 'neutral', 'bad'],
     moodPoints: 21,
     money: 50,
-    unlocked: false
+    unlocked: false,
+    getMood() {
+      let ranNumb = Math.floor(Math.random() * 3)
+      if(ranNumb === 1) {
+        return this.mood[0]
+      }
+      else if (ranNumb === 2) {
+        return this.mood[1]
+      }
+      if (ranNumb === 3) {
+        return this.mood[2]
+      }
+    }
   },
 
   {
@@ -62,10 +86,22 @@ let characters = [
     ],
     weaknesses: ['vikings', 'hannah', 'ipa', 'greys-anatomy'],
     dislikes: ['chaos', 'packer-fans'],
-    mood: ['happy', 'neutral', 'angry'],
+    mood: ['happy', 'neutral', 'bad'],
     moodPoints: 21,
     money: 50,
-    unlocked: false
+    unlocked: false,
+    getMood() {
+      let ranNumb = Math.floor(Math.random() * 3)
+      if(ranNumb === 1) {
+        return this.mood[0]
+      }
+      else if (ranNumb === 2) {
+        return this.mood[1]
+      }
+      if (ranNumb === 3) {
+        return this.mood[2]
+      }
+    }
   },
 
   {
@@ -78,10 +114,22 @@ let characters = [
     ],
     weaknesses: ['sleep', 'whiskey', 'the-girls'],
     dislikes: ['american-sports', 'messy-house', 'ipas', 'steven', 'money', 'good-jokes', 'bad-service'],
-    mood: ['happy', 'neutral', 'angry'],
+    mood: ['happy', 'neutral', 'bad'],
     moodPoints: 21,
     money: 200,
-    unlocked: false
+    unlocked: false,
+    getMood() {
+      let ranNumb = Math.floor(Math.random() * 3)
+      if(ranNumb === 1) {
+        return this.mood[0]
+      }
+      else if (ranNumb === 2) {
+        return this.mood[1]
+      }
+      if (ranNumb === 3) {
+        return this.mood[2]
+      }
+    }
   },
 
   {
@@ -94,10 +142,22 @@ let characters = [
     ],
     weaknesses: ['left-alone'],
     dislikes: ['american-sports', 'messy-house', 'bad-jokes', 'steven', 'money', 'bad-service', 'loud-music', 'long-hair'],
-    mood: ['happy', 'neutral', 'angry'],
+    mood: ['happy', 'neutral', 'bad'],
     moodPoints: 21,
     money: 300,
-    unlocked: false
+    unlocked: false,
+    getMood() {
+      let ranNumb = Math.floor(Math.random() * 3)
+      if(ranNumb === 1) {
+        return this.mood[0]
+      }
+      else if (ranNumb === 2) {
+        return this.mood[1]
+      }
+      if (ranNumb === 3) {
+        return this.mood[2]
+      }
+    }
   }
 ]
 
@@ -202,6 +262,16 @@ document.addEventListener('click', event => {
       `
     }
 
+    if (nextClick === 9) {
+      document.getElementById('game-prompt-header').innerHTML = `
+        <img src="./assets/characters/char-lena.png" alt="Queen Character" class="rounded-circle"
+        width="100" height="100">
+        <h5 class="modal-title text-center pop-title" id="pop-title">Queenly Message!</h5>
+        `
+      document.getElementById('game-modal-content').textContent = "A Mia has appeared as Guardian of the first ring!  You must convince her that you are worthy to enter the outer ring."
+      document.getElementById('close-btn').textContent = "Got It!"
+      $('#game-modal').modal('show')
+    }
   }
 
 
@@ -234,8 +304,24 @@ document.addEventListener('click', event => {
   
 })
 
-document.addEventListener('click', event => {
-  if (event.target.classList.contains('mia-start')) {
 
+// Discussion
+document.addEventListener('click', event => {
+  charIndex = 1
+  if (event.target.classList.contains('mia-start')) {
+    document.getElementById('char-on-board').innerHTML = `
+          <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle">
+      `
+    document.getElementById('game-prompt-header').innerHTML = `
+        <img src="./assets/characters/char-mia.png" alt="Mia Character" class="rounded-circle"
+        width="100" height="100">
+        <h5 class="modal-title text-center pop-title" id="pop-title">You sure about this buddy?</h5>
+        `
+    let miaStartMood = characters[charIndex].getMood()
+
+    document.getElementById('game-modal-content').textContent = `Don't say I didn't wanr ya!  So, I'm in a ${miaStartMood} mood by the way.  Convince me!`
+    document.getElementById('close-btn').textContent = "Respond"
+    $('#game-modal').modal('show')
   }
 })
+
