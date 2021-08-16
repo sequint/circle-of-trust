@@ -3,7 +3,12 @@ let round2 = false
 let round3 = false
 let round4 = false
 
-
+const characters = [
+  {
+    name: 'Steven',
+    powers: ['charm', 'surfing', 'drinking', 'art', 'sarcasm']
+  }
+]
 
 $(window).load(function () {
   $('#game-modal').modal('show');
@@ -107,12 +112,30 @@ document.addEventListener('click', event => {
     }
 
     if (nextClick === 9) {
+      document.getElementById('dual').innerHTML = `
+      <div class="modal" id="dual-modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content game-prompt-window">
+            <div class="modal-header game-prompt-header" id="game-prompt-header">
+              <img src="./assets/characters/char-lena.png" alt="Queen Character" class="rounded-circle"
+                width="100" height="100">
+                <h5 class="modal-title text-center pop-title" id="pop-title">The Queen's Decree!</h5>
+              </div>
+              <div class="modal-body" id="game-modal-body">
+                <p id="game-modal-content">Queen Lena has issued an official decree.  In order to put a ring on it, one Steven Quintana must first survive the crucible of The Circle of Trust.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+      $('#dual-modal').modal('show')
       
     }
-
   }
-
-
 })
 
 // When Steven is clicked show first prompt.
@@ -160,7 +183,6 @@ document.addEventListener('click', event => {
         width="100" height="100">
         <h5 class="modal-title text-center pop-title" id="pop-title">You sure about this buddy?</h5>
         `
-    let miaStartMood = characters[charIndex].getMood()
 
     document.getElementById('game-modal-content').textContent = `Don't say I didn't warn ya!  Convince me you're worthy!`
     document.getElementById('close-btn').textContent = "Respond"
