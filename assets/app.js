@@ -3,163 +3,7 @@ let round2 = false
 let round3 = false
 let round4 = false
 
-let characters = [
-  {
-    charName: 'Steven',
-    powers: [
-      { name: 'charm', moodPoints: 1 },
-      { name: 'programming', moodPoints: 3 },
-      { name: 'surfing', moodPoints: 4 },
-      { name: 'taking vacations', moodPoints: 6 },
-      { name: 'bad-jokes', moodPoints: 2 },
-      { name: 'drinking', moodPoints: 6 },
-    ],
-    stamina: 100,
-    money: 50,
-    level: 1,
-    inCircle: false
-  },
 
-  {
-    charName: 'Mia',
-    powers: [
-      { name: 'math', moodPoints: 2 },
-      { name: 'guitar', moodPoints: 5 },
-      { name: 'baking', moodPoints: 6 },
-      { name: 'good-jokes', moodPoints: 7 }
-    ],
-    weaknesses: ['vacations', 'baked goods', 'hanging out with friends', 'charm', 'money'],
-    dislikes: ['bad-jokes', 'misogynists', 'viking-fans'],
-    mood: ['happy', 'neutral', 'bad'],
-    moodPoints: 21,
-    money: 0,
-    unlocked: false,
-    getMood() {
-      let ranNumb = Math.floor(Math.random() * 3)
-      if(ranNumb === 1) {
-        return this.mood[0]
-      }
-      else if (ranNumb === 2) {
-        return this.mood[1]
-      }
-      if (ranNumb === 3) {
-        return this.mood[2]
-      }
-    }
-  },
-
-  {
-    charName: 'Hannah',
-    powers: [
-      { name: 'adapting', moodPoints: 2 },
-      { name: 'sarcasm', moodPoints: 4 },
-      { name: 'cooking', moodPoints: 5 },
-      { name: 'nursing', moodPoints: 8 }
-    ],
-    weaknesses: ['zach', 'house-gifts', 'greys-anatomy', 'good-jokes'],
-    dislikes: ['bad-jokes', 'misogynists', 'drunkeness'],
-    mood: ['happy', 'neutral', 'bad'],
-    moodPoints: 21,
-    money: 50,
-    unlocked: false,
-    getMood() {
-      let ranNumb = Math.floor(Math.random() * 3)
-      if(ranNumb === 1) {
-        return this.mood[0]
-      }
-      else if (ranNumb === 2) {
-        return this.mood[1]
-      }
-      if (ranNumb === 3) {
-        return this.mood[2]
-      }
-    }
-  },
-
-  {
-    charName: 'Zach',
-    powers: [
-      { name: 'golfing', moodPoints: 3 },
-      { name: 'go-with-the-flow', moodPoints: 4 },
-      { name: 'drinking-ipas', moodPoints: 6 },
-      { name: 'viking-knowledge', moodPoints: 10 }
-    ],
-    weaknesses: ['vikings', 'hannah', 'ipa', 'greys-anatomy'],
-    dislikes: ['chaos', 'packer-fans'],
-    mood: ['happy', 'neutral', 'bad'],
-    moodPoints: 21,
-    money: 50,
-    unlocked: false,
-    getMood() {
-      let ranNumb = Math.floor(Math.random() * 3)
-      if(ranNumb === 1) {
-        return this.mood[0]
-      }
-      else if (ranNumb === 2) {
-        return this.mood[1]
-      }
-      if (ranNumb === 3) {
-        return this.mood[2]
-      }
-    }
-  },
-
-  {
-    charName: 'Papa Bear',
-    powers: [
-      { name: 'bad-jokes', moodPoints: 1 },
-      { name: 'bike-riding', moodPoints: 4 },
-      { name: 'drinking', moodPoints: 8 },
-      { name: 'cooking', moodPoints: 10 }
-    ],
-    weaknesses: ['sleep', 'whiskey', 'the-girls'],
-    dislikes: ['american-sports', 'messy-house', 'ipas', 'steven', 'money', 'good-jokes', 'bad-service'],
-    mood: ['happy', 'neutral', 'bad'],
-    moodPoints: 21,
-    money: 200,
-    unlocked: false,
-    getMood() {
-      let ranNumb = Math.floor(Math.random() * 3)
-      if(ranNumb === 1) {
-        return this.mood[0]
-      }
-      else if (ranNumb === 2) {
-        return this.mood[1]
-      }
-      if (ranNumb === 3) {
-        return this.mood[2]
-      }
-    }
-  },
-
-  {
-    charName: 'Mama Bear',
-    powers: [
-      { name: 'finance', moodPoints: 5 },
-      { name: 'herbal-knowledge', moodPoints: 6 },
-      { name: 'organization', moodPoints: 8 },
-      { name: 'mama-bear-ferocity', moodPoints: 10 }
-    ],
-    weaknesses: ['left-alone'],
-    dislikes: ['american-sports', 'messy-house', 'bad-jokes', 'steven', 'money', 'bad-service', 'loud-music', 'long-hair'],
-    mood: ['happy', 'neutral', 'bad'],
-    moodPoints: 21,
-    money: 300,
-    unlocked: false,
-    getMood() {
-      let ranNumb = Math.floor(Math.random() * 3)
-      if(ranNumb === 1) {
-        return this.mood[0]
-      }
-      else if (ranNumb === 2) {
-        return this.mood[1]
-      }
-      if (ranNumb === 3) {
-        return this.mood[2]
-      }
-    }
-  }
-]
 
 $(window).load(function () {
   $('#game-modal').modal('show');
@@ -225,7 +69,7 @@ document.addEventListener('click', event => {
               <div class="card-body tip">
                 <h5 class="card-title">Tip!</h5>
                 <p class="card-text">When a character has a green border, click on them to see what they have to say.</p>
-                <a href="#" class="btn btn-primary remove-tip">Got It</a>
+                <a href="#" class="btn btn-primary remove-tip" id="remove-tip">Got It</a>
               </div>
             </div>
           </div>
@@ -263,15 +107,9 @@ document.addEventListener('click', event => {
     }
 
     if (nextClick === 9) {
-      document.getElementById('game-prompt-header').innerHTML = `
-        <img src="./assets/characters/char-lena.png" alt="Queen Character" class="rounded-circle"
-        width="100" height="100">
-        <h5 class="modal-title text-center pop-title" id="pop-title">Queenly Message!</h5>
-        `
-      document.getElementById('game-modal-content').textContent = "A Mia has appeared as Guardian of the first ring!  You must convince her that you are worthy to enter the outer ring."
-      document.getElementById('close-btn').textContent = "Got It!"
-      $('#game-modal').modal('show')
+      
     }
+
   }
 
 
@@ -298,10 +136,15 @@ document.addEventListener('click', event => {
 
     document.getElementById('close-btn').textContent = "Let's See"
 
-
     $('#game-modal').modal('show')
   }
   
+})
+
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('remove-tip')) {
+    document.getElementById('game-message').innerHTML = ''
+  }
 })
 
 
@@ -319,9 +162,10 @@ document.addEventListener('click', event => {
         `
     let miaStartMood = characters[charIndex].getMood()
 
-    document.getElementById('game-modal-content').textContent = `Don't say I didn't wanr ya!  So, I'm in a ${miaStartMood} mood by the way.  Convince me!`
+    document.getElementById('game-modal-content').textContent = `Don't say I didn't warn ya!  Convince me you're worthy!`
     document.getElementById('close-btn').textContent = "Respond"
     $('#game-modal').modal('show')
+
   }
 })
 
