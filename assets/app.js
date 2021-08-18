@@ -3,12 +3,40 @@ let round2 = false
 let round3 = false
 let round4 = false
 
-const characters = [
-  {
-    name: 'Steven',
-    powers: ['charm', 'surfing', 'drinking', 'art', 'sarcasm']
+const characters = {
+  steven: {
+    stamina: 100,
+    deductPoints() {
+      this.stamina -= Math.floor(Math.random() * 75)
+    }
+  },
+  mia: {
+    browniePoints: 0,
+    questions: [
+      {
+        question: 'How many licks does it actually take to get to the center of a tootsie pop?',
+        answers: ['Three', 'Just the right amount', 'Ask the owl', 'Three and a half', 'Exactly'],
+        correctAnswer: 'Exactly',
+        pointsToAdd: 3
+      },
+      {
+        question: 'The FA (Football Association) founded on which year?',
+        answers: ['1945', '1863', '1890', '1901', '1852'],
+        correctAnswer: '1863'
+      },
+      {
+        question: 'What is the area between the curve y=sun(x) and the x-axis from x=0 to x=pie?',
+        answers: ['Two', 'One', 'Pie', 'Pie/Two', 'Nice try, how’s your Pollack-says-what index?'],
+        correctAnswer: 'Two'
+      },
+      {
+        question: 'What famous Tech mogal went to Northeastern before dropping out to start his company?',
+        answers: ['Mark Zuckerburg', 'Jeff Howley', 'Shawn Fanning', 'Bill Gates', 'Elon Musk'],
+        correctAnswer: 'Shawn Fanning'
+      },
+    ]
   }
-]
+}
 
 $(window).load(function () {
   $('#game-modal').modal('show');
@@ -90,7 +118,7 @@ document.addEventListener('click', event => {
       document.getElementById('steven-on-board').innerHTML = `
       <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play steven-position-round-1 rounded-circle" id="steven-call-round-one">
       `
-      document.getElementById('char-on-board').innerHTML = `
+      document.getElementById('position-1').innerHTML = `
           <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle" id="mia-appear">
       `
       setTimeout(() => {
@@ -106,7 +134,7 @@ document.addEventListener('click', event => {
     }
     
     if (nextClick === 8) {
-      document.getElementById('char-on-board').innerHTML = `
+      document.getElementById('position-1').innerHTML = `
           <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle say-something mia-start" id="mia-start">
       `
     }
@@ -175,7 +203,7 @@ document.addEventListener('click', event => {
 document.addEventListener('click', event => {
   charIndex = 1
   if (event.target.classList.contains('mia-start')) {
-    document.getElementById('char-on-board').innerHTML = `
+    document.getElementById('position-1').innerHTML = `
           <img src="./assets/characters/char-mia.png" alt="Mia Character" class="char-in-play mia-position rounded-circle">
       `
     document.getElementById('game-prompt-header').innerHTML = `
