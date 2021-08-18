@@ -59,9 +59,9 @@ const instructions = [
 document.getElementById('decree-next-btn').addEventListener('click', event => {
   event.preventDefault()
 
-  if (nextClick > 4) {
-    document.getElementById('game-modal')
-  }
+  // if (nextClick > 4) {
+  //   document.getElementById('game-modal')
+  // }
 
   document.getElementById('game-modal-content').textContent = instructions[nextClick]
 
@@ -113,7 +113,7 @@ document.addEventListener('click', event => {
       `
     }
 
-    // Place Mia on screen on 7th click.
+    // Place Mia on screen on 7th click and queen message about next character on timeout.
     if (nextClick === 7) {
       document.getElementById('steven-on-board').innerHTML = `
       <img src="./assets/characters/char-steven.jpeg" alt="Steven Character" class="char-in-play steven-position-round-1 rounded-circle" id="steven-call-round-one">
@@ -130,7 +130,7 @@ document.addEventListener('click', event => {
         document.getElementById('game-modal-content').textContent = "A Mia has appeared as Guardian of the first ring!  You must convince her that you are worthy to enter the outer ring."
         document.getElementById('close-btn').textContent = "Got It!"
         $('#game-modal').modal('show')
-      }, 1000)
+      }, 750)
     }
     
     if (nextClick === 8) {
